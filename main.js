@@ -29,7 +29,8 @@ function clearTable() {
   for (let i = 0; i < rusLetters.length; i ++) {
     if (game.answerLetter[i]) {
       let cell = builder(game.answerLetter[i]);
-      cell.style.display = 'none';
+      cell.classList.remove('boxE');
+      cell.classList.add('uncorect');
       puzl.appendChild(cell);
     }
     letters.appendChild(builder(rusLetters[i]));
@@ -47,6 +48,16 @@ btn.addEventListener('click', () => {
   startGame();
 });
 
-letters.addEventListener('click', event => {
+function cheker(target) {
 
-});
+ if(game.answerLetter.includes(target.textContent)) {
+  target.classList.remove('boxE');
+  target.classList.add('corect');
+ }
+ target.classList.add('uncorect')
+}
+
+ letters.addEventListener('click', event => {
+  cheker(event.target);
+ });
+
