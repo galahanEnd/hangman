@@ -1,0 +1,27 @@
+  .boxR {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #shar {
+    cursor: pointer;
+  }
+  
+  #ball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .active {
+  display: block !important;
+        }
+
+        .myText {
+            display: none;
+        }
+        .title {
+            font-size: 1.5em;
+            background-color: #ddd;
+}
